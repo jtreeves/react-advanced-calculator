@@ -10,7 +10,7 @@ function DigitButton(props) {
     return (
         <button
             className={className}
-            onClick={props.digitEntered}
+            onClick={() => {props.digitEntered}}
         >
             {props.digit}
         </button>

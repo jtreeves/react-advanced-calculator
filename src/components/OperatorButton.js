@@ -2,9 +2,12 @@ import React from 'react'
 
 function OperatorButton(props) {
     return (
-        <div>
+        <button
+            className="calc-button calc-button-op"
+            onClick=''
+        >
             OperatorButton
-        </div>
+        </button>
     )
 }
 

@@ -23,6 +23,18 @@ const Calculator = props => {
         }
     }
 
+    const operatorEntered = (op) => {
+        if (num1 === '') {
+            // no op
+        } else if (num1 !== '' && num2 !== '') {
+            //no op
+        } else if (operator !== '') {
+            // no op
+        } else {
+            setOperator(op)
+        }
+    }
+
     return (
         <div className="container">
             <h1>React Calculator</h1>
@@ -41,7 +53,7 @@ const Calculator = props => {
                     <DigitButton digitEntered={digitEntered} digit="7" />
                     <DigitButton digitEntered={digitEntered} digit="8" />
                     <DigitButton digitEntered={digitEntered} digit="9" />
-                    <OperatorButton operator="x" />
+                    <OperatorButton operatorEntered={operatorEntered} operator="x" />
                     <button className="calc-button">7</button>
                     <button className="calc-button">8</button>
                     <button className="calc-button">9</button>
@@ -51,7 +63,7 @@ const Calculator = props => {
                     <DigitButton digitEntered={digitEntered} digit="4" />
                     <DigitButton digitEntered={digitEntered} digit="5" />
                     <DigitButton digitEntered={digitEntered} digit="6" />
-                    <OperatorButton operator="-" />
+                    <OperatorButton operatorEntered={operatorEntered} operator="-" />
                     <button className="calc-button">4</button>
                     <button className="calc-button">5</button>
                     <button className="calc-button">6</button>
@@ -61,7 +73,7 @@ const Calculator = props => {
                     <DigitButton digitEntered={digitEntered} digit="1" />
                     <DigitButton digitEntered={digitEntered} digit="2" />
                     <DigitButton digitEntered={digitEntered} digit="3" />
-                    <OperatorButton operator="+" />
+                    <OperatorButton operatorEntered={operatorEntered} operator="+" />
                     <button className="calc-button">1</button>
                     <button className="calc-button">2</button>
                     <button className="calc-button">3</button>
