@@ -49,6 +49,20 @@ const Calculator = props => {
         }
     }
 
+    const equalsEntered = () => {
+        setNum2(tempNum)
+        setTempNum('')
+        if (operator === '+') {
+            setResults(num1 + num2)
+        } else if (operator === '-') {
+            setResults(num1 - num2)
+        } else if (operator === 'x') {
+            setResults(num1 * num2)
+        } else if (operator === '/') {
+            setResults(num1 / num2)
+        }
+    }
+
     return (
         <div className="container">
             <h1>React Calculator</h1>
