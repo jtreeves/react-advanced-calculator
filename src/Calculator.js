@@ -4,6 +4,7 @@ const Calculator = props => {
     // Declare state variables
     const [num1, setNum1] = useState()
     const [num2, setNum2] = useState()
+    const [tempNum, setTempNum] = useState()
     const [operator, setOperator] = useState()
 
     const clear = () => {
@@ -20,6 +21,8 @@ const Calculator = props => {
         } else if (num1 !== '') {
             // Concatenate new digit onto existing number
             setNum1(num1 + digit)
+        } else if (num1 !== '' && operator !== '') {
+
         }
     }
 
