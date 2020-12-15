@@ -6,6 +6,7 @@ const Calculator = props => {
     const [num2, setNum2] = useState()
     const [tempNum, setTempNum] = useState()
     const [operator, setOperator] = useState()
+    const [result, setResult] = useState()
 
     const clear = () => {
         setNum1('')
@@ -35,6 +36,16 @@ const Calculator = props => {
             // no op
         } else {
             setOperator(op)
+        }
+    }
+
+    const displayForNum2 = () => {
+        if (!num1) {
+            return ''
+        } else if (!num2) {
+            return tempNum
+        } else {
+            return num2
         }
     }
 
