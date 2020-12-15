@@ -8,7 +8,10 @@ function DigitButton(props) {
     }
     
     return (
-        <button className={className}>
+        <button
+            className={className}
+            onClick={props.digitEntered}
+        >
             {props.digit}
         </button>
     )

@@ -38,9 +38,9 @@ const Calculator = props => {
                     <button className="calc-button calc-button-op">/</button>
                 </div>
                 <div className="calc-row">
-                    <DigitButton digit="7" />
-                    <DigitButton digit="8" />
-                    <DigitButton digit="9" />
+                    <DigitButton digitEntered={digitEntered} digit="7" />
+                    <DigitButton digitEntered={digitEntered} digit="8" />
+                    <DigitButton digitEntered={digitEntered} digit="9" />
                     <OperatorButton operator="x" />
                     <button className="calc-button">7</button>
                     <button className="calc-button">8</button>
@@ -48,9 +48,9 @@ const Calculator = props => {
                     <button className="calc-button calc-button-op">x</button>
                 </div>
                 <div className="calc-row">
-                    <DigitButton digit="4" />
-                    <DigitButton digit="5" />
-                    <DigitButton digit="6" />
+                    <DigitButton digitEntered={digitEntered} digit="4" />
+                    <DigitButton digitEntered={digitEntered} digit="5" />
+                    <DigitButton digitEntered={digitEntered} digit="6" />
                     <OperatorButton operator="-" />
                     <button className="calc-button">4</button>
                     <button className="calc-button">5</button>
@@ -58,9 +58,9 @@ const Calculator = props => {
                     <button className="calc-button calc-button-op">-</button>
                 </div>
                 <div className="calc-row">
-                    <DigitButton digit="1" />
-                    <DigitButton digit="2" />
-                    <DigitButton digit="3" />
+                    <DigitButton digitEntered={digitEntered} digit="1" />
+                    <DigitButton digitEntered={digitEntered} digit="2" />
+                    <DigitButton digitEntered={digitEntered} digit="3" />
                     <OperatorButton operator="+" />
                     <button className="calc-button">1</button>
                     <button className="calc-button">2</button>
@@ -68,7 +68,7 @@ const Calculator = props => {
                     <button className="calc-button calc-button-op">+</button>
                 </div>
                 <div className="calc-row">
-                    <DigitButton digit="0" wide />
+                    <DigitButton digitEntered={digitEntered} digit="0" wide />
                     <button className="calc-button width-2">0</button>
                     <button className="calc-button">.</button>
                     <button className="calc-button calc-button-op">=</button>
