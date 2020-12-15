@@ -7,6 +7,7 @@ const Calculator = props => {
     const [tempNum, setTempNum] = useState()
     const [operator, setOperator] = useState()
     const [result, setResult] = useState()
+    const [shouldCalculate, setShouldCalculate] = useState()
 
     const clear = () => {
         setNum1('')
