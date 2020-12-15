@@ -12,11 +12,23 @@ const Calculator = props => {
         setOperator('')
     }
 
+    const digitEntered = (digit) => {
+        if (digit === '0' && num1 === '') {
+            // no-op
+        } else if (digit !== '0' && num1 === '') {
+            setNum1(digit)
+        } else if (num1 !== '') {
+            // Concatenate new digit onto existing number
+            setNum1(num1 + digit)
+        }
+    }
+
     return (
         <div className="container">
             <h1>React Calculator</h1>
             <div className="calc-container">
                 <p>Values: </p>
+                <Display num1={num1} num2={num2} />
                 <div className="answer-box">TBD</div>
                 <div className="calc-row">
                     <ClearButton clear={clear}/>
